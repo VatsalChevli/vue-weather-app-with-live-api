@@ -1,5 +1,8 @@
 # vue-weather-app-with-live-api
 
+## Screenshot
+![Weather App](image.png)
+
 ## Project setup
 ```
 npm install
