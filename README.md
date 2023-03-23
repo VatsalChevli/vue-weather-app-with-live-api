@@ -1,4 +1,4 @@
-# weather-fore
+# vue-weather-app-with-live-api
 
 ## Project setup
 ```
