@@ -33,7 +33,6 @@ export default ({
   methods:{
     async loadData()
     {
-      /*let url = this.url_base+this.query+"?unitGroup=metric&include=current&key="+this.api_key+"&contentType=json";*/
       let result=await axios.get(`${this.url_base}?key=${this.api_key}&q=${this.query}`);
       
       console.log(JSON.stringify(result.data.location.name));
