@@ -1,5 +1,5 @@
 <template>
-  <div :class="typeof weathers.location != 'undefined' && weathers_temp>30 ? 'weather_report_warmbg' : 'weather_reportbg' ">
+  <div :class="typeof weathers.location != 'undefined' && weathers_temp>4 && weathers_temp<29 ? 'weather_reportbg' : weathers_temp<5 ? 'weather_report_coldbg':'weather_report_warmbg' ">
     <div class="weather_report">
       <input type="text" name="" id="" class="weather_search" placeholder="Search" v-model="query" v-on:keyup="loadData">
       <!-- <button v-on:click="loadData" class="signup-btn">Sign Up</button> -->
@@ -110,6 +110,20 @@ export default ({
     text-align: center;
     border-radius: 20px;
      background: url('../assets/image/warm.webp');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     backdrop-filter: blur(1px);
+     overflow: hidden;
+   
+  }
+  
+  .weather_report_coldbg{
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    border-radius: 20px;
+     background: url('../assets/image/cold-weather.jpg');
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
